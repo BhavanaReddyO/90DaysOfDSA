@@ -1,0 +1,16 @@
+Time Complexity of an Algorithm
+-------------------------------
+Definition:  It is the amount of time taken by the algorithm to run as a function of length of input.
+
+
+Why ?
+1)For making better programs
+2)Comparision of Algorithms
+
+
+
+Asymptotic Notations
+-----------------------
+1)Big O Notation(Worst time Complexity)
+2)Omega Notation(Best Time Complexity)
+3)Theta Notation(Average time complexity)
