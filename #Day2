@@ -7,3 +7,4 @@ Auxilary Space: It is the extra space taken by the algorithm.
 
 Space Complexity = Auxilary Space + Space taken by the algorithm to run.
 
+** Space Complexity of a recursive tree is the height of the tree.
