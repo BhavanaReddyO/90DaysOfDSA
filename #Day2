@@ -6,3 +6,4 @@ Space Complexity is tha amount of space taken by the algorithm to run as the fun
 Auxilary Space: It is the extra space taken by the algorithm.
 
 Space Complexity = Auxilary Space + Space taken by the algorithm to run.
+
