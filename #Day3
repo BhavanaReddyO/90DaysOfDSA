@@ -1,5 +1,8 @@
 RECURSION: It is a technique of function calling itself.
 ----------------------------------------------------
+What is a Recursion Tree ??
+A recursion tree is a pictorial representation of all the processes happening to solve any given recursive problem.
+
 
 Example program of finding factorial of given number
 -------------------------------------------------------
@@ -36,3 +39,32 @@ public class Factorial {
     space complexity : O(n)
 */
 -----------------------------------------------------------------------------------------------
+
+
+Find Nth Fibonacci Number
+--------------------------
+class Solution {
+    public int fib(int n) {
+        // base condition
+        if(n==0)
+            return 0;
+		if(n==1 || n==2)
+            return 1;
+
+        // recursion call that will return (n-1)th & (n-2)th fibo number which will then be added to give us the nth fibo number
+		return fib(n-1)+fib(n-2);
+    }
+}
+
+/*
+    time complexity : O(2^n)
+    space complexity : O(n)
+*/
+
+Time Complexity: O(2 ^ N)
+
+As time complexity depends on number of nodes, hence Time Complexity is O( 2 ^ N)
+
+Space Complexity: O(N)
+
+Space Complexity will be equal to height of the recursive tree, thus Space Complexity is O(N)
