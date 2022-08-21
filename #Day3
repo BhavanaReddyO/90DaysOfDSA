@@ -1,0 +1,32 @@
+RECURSION: It is a technique of function calling itself.
+----------------------------------------------------
+
+Example program of finding factorial of given number
+-------------------------------------------------------
+package com.wipro.Recursion;
+
+import java.util.Scanner;
+
+public class Factorial {
+	static  int fact(int n) {
+	    	if(n<=0) 
+	    	 return 1;
+	    	
+	    	else {
+	    		return n*fact(n-1);
+	    	}
+	}
+	public static void main(String[] args) {
+	
+  Scanner sc=new Scanner(System.in);
+  System.out.println("Enter the number to find the factorial");
+  int n=sc.nextInt();
+  if(n<0) 
+	   System.out.println("Error");
+  else
+	   System.out.println("Factorial of"+ n +" is"+fact(n));
+    	
+    
+	}
+
+}
