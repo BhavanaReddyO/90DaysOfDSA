@@ -1,0 +1,25 @@
+Java Code to find Sum of n natural numbers
+------------------------------------------------
+
+import java.util.Scanner;
+
+public class sum {
+	public static int sum(int n) {
+		if(n==1)
+			return 1;
+		int partialans=sum(n-1);
+			return n+partialans;
+	}
+	
+
+	public static void main(String[] args) {
+		 Scanner scan = new Scanner(System.in);
+	      System.out.print("Enter n value: ");
+	     int  n = scan.nextInt();
+	     System.out.println("Sum of n natural number is:"+sum(n));
+
+	}
+
+}
+Time Complexity: O(n)-->Number of nodes in a Tree
+Space Complexity:O(n)-->Height of the Tree
