@@ -1,5 +1,5 @@
-Java Code to find Sum of n natural numbers
-------------------------------------------------
+Code 1: Java Code to find Sum of n natural numbers
+==================================================================
 
 import java.util.Scanner;
 
@@ -23,3 +23,31 @@ public class sum {
 }
 Time Complexity: O(n)-->Number of nodes in a Tree
 Space Complexity:O(n)-->Height of the Tree
+
+==============================================================================================================
+
+Code 2:Power x^n(Stack height = n)
+
+==============================================================================================================
+import java.util.Scanner;
+
+public class Power {
+	public static long power(long x,long n) {
+		if(n==0)
+			return 1;
+		long partialAns=power(x,n-1);
+		return x*partialAns;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		long x=sc.nextLong();
+		long n=sc.nextLong();
+		System.out.println("Power of a given number is:"+power(x,n));
+	}
+
+}
+
+Time Complexity:
+Space Complexity:
+
