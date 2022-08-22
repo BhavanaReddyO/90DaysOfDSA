@@ -48,6 +48,39 @@ public class Power {
 
 }
 
-Time Complexity:
-Space Complexity:
+Time Complexity:O(n)
+Space Complexity:O(n)
+===========================================More Optimized solution for Power Code===============================
+import java.util.Scanner;
+
+public class Power {
+	
+
+		public static long Pow(long x, long n) {
+		// base condition
+		if(n==0) return 1;
+
+	        long temp=Pow(x,n/2); // recursion call
+
+	        // if N is odd then we will have to multiply X
+	        if(n%2==1) return temp*temp*x;
+	        return temp*temp;
+		}
+	
+ public static void main(String[] args) {
+	 Scanner scan = new Scanner(System.in);
+     System.out.print("Enter x value: ");
+     long x=scan.nextLong();
+     System.out.print("Enter n value: ");
+   long  n = scan.nextInt();
+   System.out.println(Pow(x,n));
+	/*
+	    time complexity : O(log n)
+	    space complexity : O(log n)
+	*/
+
+
+}
+}
+
 
