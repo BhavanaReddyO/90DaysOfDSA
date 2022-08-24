@@ -48,3 +48,59 @@ public class CountNumberOfZeros {
 }
 
 output:2
+=========================================================================================
+Code 3:Code to calculate the number of steps required to reduce the given number to 0
+
+public class StepCount {
+
+	public static void main(String[] args) {
+		System.out.println(stepsCount(41));
+
+	}
+	public static int stepsCount(int num) {
+		int steps=0;
+		return helper(num,steps);
+	}
+	private static int helper(int num, int steps) {
+		if(num==0)
+		 return steps;
+		if(num%2==0)
+		 return helper(num/2,steps+1);
+		
+		return helper(num-1,steps+1);
+	}
+
+}
+output:8
+===================================================================================
+Code 4:   Binary Search using Recursion
+
+import java.util.Scanner;
+
+public class BinarySearch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int arr[]= {1,2,3,4,5};
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the target");
+int target=sc.nextInt();
+System.out.println(search(arr,target,0,arr.length-1));
+		
+		
+	}
+	public static int search(int[] arr,int target,int s,int e) {
+		if(s>e) {
+			return -1;}
+		int m=s+(e-s)/2;
+		if(target==arr[m])
+			return m;
+		if(target>arr[m])
+			return search(arr,target,m+1,e);
+		return search(arr,target,s,m-1);
+		
+	}
+
+}
+Time Complexity:O(logN)
+Space Complexity:O(logN)
