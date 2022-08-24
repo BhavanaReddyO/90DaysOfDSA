@@ -102,5 +102,6 @@ System.out.println(search(arr,target,0,arr.length-1));
 	}
 
 }
+--->Output--->Code will return the index of asked target number in the array.
 Time Complexity:O(logN)
 Space Complexity:O(logN)
