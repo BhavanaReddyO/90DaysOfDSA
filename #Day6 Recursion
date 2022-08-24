@@ -1,0 +1,50 @@
+Code 1: Java program to find the reverse of a number using helper function
+===============================================================================================
+public class Reverse {
+
+	public static void main(String[] args) {
+		System.out.println(rev(1234));
+
+	}
+	static int rev(int n) {
+		int digits=(int)Math.log10(n)+1;
+		return helper(n,digits);
+	}
+	private static int helper(int n, int digits) {
+		if(n%10==n)
+		 return n;
+		int rem=n%10;
+		return (int) (rem*Math.pow(10, digits-1)+helper(n/10,digits-1));
+	}
+
+}
+Output:4321
+
+
+---------------------------------------------------------------------------
+Code 2: Java program to count the number of zeros in the given number using recursion
+===================================================================================
+public class CountNumberOfZeros {
+
+	public static void main(String[] args) {
+		System.out.println(countZero(30201));
+
+	}
+	public static int countZero(int n) {                                 
+		int c=0;
+		return helper(n, c);
+	}
+	private static int helper(int n,int c) {
+		if(n==0)
+		  return c;
+		int rem=n%10;
+		if(rem==0)
+			return helper(n/10,c+1);
+		return helper(n/10,c);
+	}
+	
+	
+
+}
+
+output:2
